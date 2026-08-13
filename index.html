@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <!-- ===== REGLAGES DE BASE ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== REFERENCEMENT ET PARTAGE ===== -->
+    <meta name="description" content="Portfolio d'Eleona Bordenave, étudiante en communication graphique et digitale au Havre. Identité visuelle, illustration, réseaux sociaux, vidéo et rédaction. En recherche d'alternance pour la rentrée 2026.">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Eleona Bordenave">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Eleona Bordenave, communication graphique et digitale">
+    <meta property="og:description" content="Portfolio d'Eleona Bordenave, étudiante en communication graphique et digitale au Havre. Identité visuelle, illustration, réseaux sociaux, vidéo et rédaction. En recherche d'alternance pour la rentrée 2026.">
+    <meta property="og:url" content="https://eleonabordenave.fr/index.html">
+    <meta property="og:image" content="https://eleonabordenave.fr/assets/images/favicon.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- ===== FIN REFERENCEMENT ===== -->
+    <title>Eleona Bordenave - Portfolio</title>
+
+    <!-- ===== POLICES GOOGLE FONTS ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Cormorant:wght@400;500;600&family=Cormorant+Unicase:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <!-- ===== FEUILLE DE STYLE ===== -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+    <!-- ============================================
+         HEADER / NAVBAR
+         ============================================ -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo_1.svg" alt="Eleona Bordenave">
+        </a>
+
+        <button class="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-links">
+            <a href="index.html#carte">Voir la carte</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="projets.html">Projets</a>
+            <a href="competences.html">Compétences</a>
+            <a href="contact.html" class="btn btn-nav">On travaille ensemble ?</a>
+        </nav>
+    </header>
+
+
+    <!-- ============================================
+         CONTENU DE LA PAGE
+         ============================================ -->
+
+<main>
+
+    <section class="hero-section">
+        <div class="hero-contenu">
+
+            <h1 class="hero">Portfolio</h1>
+
+            <p class="manuscrite">Communication graphique et digitale</p>
+
+            <div class="hero-intro">
+                <p>Entrez, bienvenue sur mon portfolio !</p>
+                <p>Je suis Eleona Bordenave, étudiante en communication, et je cherche l'entreprise qui m'accueillera en alternance dès la rentrée 2026.</p>
+            </div>
+
+            <div class="hero-boutons">
+                <a href="projets.html" class="btn btn-principal">Voir les projets</a>
+                <a href="index.html#carte" class="btn btn-secondaire">Voir la carte</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================
+             SECTION CARTE (le menu)
+             ============================================ -->
+        <section class="carte-section" id="carte">
+            <div class="conteneur">
+                <div class="carte-grille">
+
+                    <!-- ===== PANNEAU GAUCHE ===== -->
+                    <div class="carte-panneau">
+                        <h2 class="carte-titre">La Carte</h2>
+
+                        <!-- Entrees -->
+                        <div class="carte-bloc">
+                            <h3 class="carte-bloc-nom">Entrées</h3>
+                            <p class="carte-bloc-desc">Un avant-goût de qui je suis et d'où je viens</p>
+                            <div class="menu-lignes">
+                                <div class="ligne-menu">
+                                    <span class="ligne-nom">Le Portrait</span>
+                                    <span class="ligne-desc">qui je suis en quelques mots</span>
+                                    <span class="ligne-points"></span>
+                                    <span class="ligne-valeur">à découvrir</span>
+                                </div>
+                                <div class="ligne-menu">
+                                    <span class="ligne-nom">Le parcours</span>
+                                    <span class="ligne-desc">formation et premières expériences</span>
+                                    <span class="ligne-points"></span>
+                                    <span class="ligne-valeur">au choix</span>
+                                </div>
+                                <div class="ligne-menu">
+                                    <span class="ligne-nom">Le Curriculum</span>
+                                    <span class="ligne-desc">à déguster sur place ou à emporter</span>
+                                    <span class="ligne-points"></span>
+                                    <span class="ligne-valeur">en pdf</span>
+                                </div>
+                            </div>
+                            <div class="carte-bouton">
+                                <a href="a-propos.html" class="btn btn-autre">En savoir plus</a>
+                            </div>
+                        </div>
+
+                        <!-- Plats de resistance -->
+                        <div class="carte-bloc">
+                            <h3 class="carte-bloc-nom">Plats de résistance</h3>
+                            <p class="carte-bloc-desc">Mes projets, servis en plusieurs spécialités</p>
+
+                            <div class="specialite">
+                                <img class="picto" src="assets/images/picto_cloche.svg" alt="">
+                                <p class="specialite-label">La spécialité de la maison</p>
+                                <h4 class="specialite-titre">Cofféa - Alternance</h4>
+                                <p class="specialite-desc">Chargée de communication en autonomie pour une enseigne de café, thé et gourmandises. De la vidéo à la rédaction web, en passant par les réseaux et la photo.</p>
+                                <a href="projets/coffea.html" class="btn btn-autre">Choisir ce plat</a>
+                            </div>
+
+                            <div class="menu-lignes">
+                                <div class="ligne-menu">
+                                    <span class="ligne-nom">Identité visuelle</span>
+                                    <span class="ligne-desc">logo, charte, déclinaisons</span>
+                                    <span class="ligne-points"></span>
+                                    <span class="ligne-valeur">signature</span>
+                                </div>
+                                <div class="ligne-menu">
+                                    <span class="ligne-nom">Illustration et iconographie</span>
+                                    <span class="ligne-desc">pictogrammes, illustrations</span>
+                                    <span class="ligne-points"></span>
+                                    <span class="ligne-valeur">fait maison</span>
+                                </div>
+                                <div class="ligne-menu">
+                                    <span class="ligne-nom">Communication et réseaux</span>
+                                    <span class="ligne-desc">stratégie, contenus</span>
+                                    <span class="ligne-points"></span>
+                                    <span class="ligne-valeur">choix du chef</span>
+                                </div>
+                                <div class="ligne-menu">
+                                    <span class="ligne-nom">Vidéo et motion</span>
+                                    <span class="ligne-desc">montage, motion design</span>
+                                    <span class="ligne-points"></span>
+                                    <span class="ligne-valeur">fait maison</span>
+                                </div>
+                            </div>
+                            <div class="carte-bouton">
+                                <a href="projets.html" class="btn btn-autre">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== PANNEAU DROIT ===== -->
+                    <div class="carte-panneau">
+
+                        <!-- Desserts -->
+                        <div class="carte-bloc">
+                            <h3 class="carte-bloc-nom">Desserts</h3>
+                            <p class="carte-bloc-desc">Le mot de la fin, tout en gourmandise</p>
+                            <div class="desserts-cartes">
+                                <div class="dessert-carte">
+                                    <img class="picto" src="assets/images/picto_etoile.svg" alt="" loading="lazy">
+                                    <h4 class="dessert-titre">Créativité</h4>
+                                    <p class="dessert-desc">Une pincée d'audace, beaucoup d'idées, et le goût du détail</p>
+                                </div>
+                                <div class="dessert-carte">
+                                    <img class="picto" src="assets/images/picto_etoile.svg" alt="" loading="lazy">
+                                    <h4 class="dessert-titre">Rigueur</h4>
+                                    <p class="dessert-desc">Un dressage soigné, de la mise en place au coup de feu</p>
+                                </div>
+                                <div class="dessert-carte">
+                                    <img class="picto" src="assets/images/picto_etoile.svg" alt="" loading="lazy">
+                                    <h4 class="dessert-titre">Curiosité</h4>
+                                    <p class="dessert-desc">En quête de nouvelles saveurs, l'œil ouvert sur les tendances</p>
+                                </div>
+                            </div>
+                            <div class="carte-bouton">
+                                <a href="competences.html" class="btn btn-autre">En savoir plus</a>
+                            </div>
+                        </div>
+
+                        <!-- Les vins -->
+                        <div class="carte-bloc">
+                            <h3 class="carte-bloc-nom">Les vins</h3>
+                            <p class="carte-bloc-desc">Les langues que je parle, servies par millésime</p>
+                            <div class="menu-lignes">
+                                <div class="ligne-menu">
+                                    <span class="ligne-nom">Français</span>
+                                    <span class="ligne-desc">le grand cru de la maison</span>
+                                    <span class="ligne-points"></span>
+                                    <span class="ligne-valeur">maternelle</span>
+                                </div>
+                                <div class="ligne-menu">
+                                    <span class="ligne-nom">Anglais</span>
+                                    <span class="ligne-desc">jeune millésime, à faire vieillir</span>
+                                    <span class="ligne-points"></span>
+                                    <span class="ligne-valeur">notions, en cours d'affinage</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Les cocktails -->
+                        <div class="carte-bloc">
+                            <h3 class="carte-bloc-nom">Les Cocktails</h3>
+                            <p class="carte-bloc-desc">Mes qualités relationnelles, shaker maison</p>
+                            <div class="menu-lignes">
+                                <div class="ligne-menu">
+                                    <span class="ligne-nom">Esprit d'équipe</span>
+                                    <span class="ligne-desc">écoute, entraide, bonne humeur</span>
+                                    <span class="ligne-points"></span>
+                                    <span class="ligne-valeur">à partager</span>
+                                </div>
+                                <div class="ligne-menu">
+                                    <span class="ligne-nom">Adaptabilité</span>
+                                    <span class="ligne-desc">souplesse, sang-froid</span>
+                                    <span class="ligne-points"></span>
+                                    <span class="ligne-valeur">best-seller</span>
+                                </div>
+                                <div class="ligne-menu">
+                                    <span class="ligne-nom">Communication</span>
+                                    <span class="ligne-desc">clarté, écoute, diplomatie</span>
+                                    <span class="ligne-points"></span>
+                                    <span class="ligne-valeur">pétillant</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bouton addition (centre dans l'espace restant) -->
+                        <div class="addition-bouton">
+                            <button type="button" class="btn btn-addition" id="btn-addition">Demander l'addition</button>
+                        </div>
+
+                        <!-- Logo signature (tout en bas) -->
+                        <div class="carte-signature">
+                            <img src="assets/images/logo_2.svg" alt="Eleona Bordenave" loading="lazy">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION LOGICIELS + LE LABO
+             ============================================ -->
+        <section class="logiciels-section">
+            <div class="logiciels-grille">
+
+                <!-- Colonne gauche : la cloche -->
+                <div class="cloche-colonne">
+                    <img class="cloche-image" id="cloche-image" src="assets/images/cloche_logiciels_fermee.png" alt="Cloche fermée sur un plateau" loading="lazy">
+                </div>
+
+                <!-- Colonne droite : la carte Le Labo -->
+                <div class="chat-colonne">
+                    <div class="chat-carte">
+                        <img class="chat-avatar" src="assets/images/avatar_chat_accueil.png" alt="Avatar chat" loading="lazy">
+                        <p class="chat-label">Le Labo</p>
+                        <p class="chat-desc">Choisis sa couleur, ses taches et son style, et donne vie à ton propre chat.</p>
+                        <a href="projets/le-labo.html#illustration" class="btn btn-principal">Personnaliser votre chat</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================
+             POPUP ADDITION (cachee par defaut)
+             ============================================ -->
+        <div class="addition-overlay" id="addition-overlay">
+            <div class="ticket" role="dialog" aria-modal="true" aria-label="Addition">
+                <button class="ticket-fermer" id="ticket-fermer" aria-label="Fermer">&times;</button>
+
+                <h3 class="ticket-titre">L'Addition</h3>
+                <p class="ticket-soustitre">Merci de votre visite</p>
+
+                <div class="ticket-separateur"></div>
+
+                <div class="ticket-lignes">
+                    <div class="ticket-ligne"><span class="lbl">Poste recherché</span><span class="pts"></span><span class="val">Alternance</span></div>
+                    <div class="ticket-ligne"><span class="lbl">Domaine</span><span class="pts"></span><span class="val">Comm. graphique et digitale</span></div>
+                    <div class="ticket-ligne"><span class="lbl">Disponibilité</span><span class="pts"></span><span class="val">Rentrée 2026</span></div>
+                    <div class="ticket-ligne"><span class="lbl">Formation</span><span class="pts"></span><span class="val">Normandie Web School</span></div>
+                </div>
+
+                <div class="ticket-separateur"></div>
+
+                <div class="ticket-ligne ticket-total"><span class="lbl">Total</span><span class="pts"></span><span class="val">Votre future alternante</span></div>
+
+                <div class="ticket-separateur"></div>
+
+                <p class="ticket-servie">Servie par</p>
+                <p class="ticket-nom">Eleona Bordenave</p>
+                <p class="ticket-contact">e.bordenave.contact@gmail.com</p>
+
+                <div class="ticket-codebarre"></div>
+
+                <div class="ticket-boutons">
+                    <a href="mailto:e.bordenave.contact@gmail.com" class="btn btn-addition">Envoyer un mail</a>
+                    <a href="contact.html" class="btn btn-autre">Me contacter</a>
+                </div>
+
+            </div>
+        </div>
+
+</main>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="footer-colonne">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo_1.svg" alt="Eleona Bordenave" loading="lazy">
+            </a>
+            <p class="footer-info">PORTFOLIO Communication graphique et digitale</p>
+            <p class="footer-copyright">© 2026 Eleona Bordenave. Tous droits réservés.</p>
+        </div>
+
+        <div class="footer-colonne">
+            <h3 class="footer-titre">La carte</h3>
+            <a href="index.html#carte">Voir la carte</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="projets.html">Projets</a>
+            <a href="competences.html">Compétences</a>
+            <a href="contact.html">On travaille ensemble ?</a>
+        </div>
+
+        <div class="footer-colonne">
+            <h3 class="footer-titre">Réservations</h3>
+            <a href="mailto:e.bordenave.contact@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/eleona-bordenave-a7b608210/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="contact.html">On travaille ensemble ?</a>
+        </div>
+    </footer>
+
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

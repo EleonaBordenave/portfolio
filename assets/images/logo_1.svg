@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 959.81 146.67">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dbc089;
+        font-family: PinyonScript, 'Pinyon Script';
+      }
+
+      .cls-1, .cls-2 {
+        font-size: 120.79px;
+      }
+
+      .cls-2 {
+        fill: #f4ead2;
+        font-family: CormorantSC-Semi, 'Cormorant SC';
+      }
+    </style>
+  </defs>
+  <text class="cls-2" transform="translate(0 98.14)"><tspan x="0" y="0">ELEONA</tspan></text>
+  <text class="cls-1" transform="translate(487.86 100.25)"><tspan x="0" y="0">Bordenave</tspan></text>
+</svg>

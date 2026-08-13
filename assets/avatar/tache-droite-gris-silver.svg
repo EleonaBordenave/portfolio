@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Labo : Apprendre le digital et la com' graphique en s'amusant</title>
+  <meta name="description" content="Le Labo : des tutoriels clairs sur WordPress, Canva et Illustrator, des quiz et des cartes à collectionner. Travail pédagogique sans objectifs commerciaux.">
+  <link rel="icon" href="assets/img/logo-cat.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <script src="assets/js/seo.js"></script>
+</head>
+<body>
+
+  <!-- ======================= NAVBAR (injectée par layout.js) ======================= -->
+  <div data-nav></div>
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero">
+    <div class="hero__inner">
+      <img class="hero__cat" src="assets/img/loki.svg" alt="Loki, le chat mascotte du Labo">
+      <div class="hero__center">
+        <span class="subtitle">Bienvenue dans</span>
+        <h1>LE LABO</h1>
+        <p class="text-base">Le Labo, c'est apprendre le digital et la com' graphique en s'amusant : des tutos clairs, des cartes à collectionner, et zéro prise de tête.</p>
+        <div class="hero__btns">
+          <a class="btn btn--primary" href="tutos.html">Découvrir les tutos</a>
+          <a class="btn btn--green" href="inscription.html">Créer un compte</a>
+        </div>
+      </div>
+      <img class="hero__cat hero__cat--right" src="assets/img/neige.svg" alt="Neige, la chatte mascotte du Labo">
+    </div>
+  </section>
+
+  <!-- ======================= COMMENT ÇA MARCHE ======================= -->
+  <section class="hiw" id="comment">
+    <div class="sec-head">
+      <h2>Comment ça marche ?</h2>
+      <p class="text-base">Comprendre, pratiquer, mémoriser : c'est tout le principe du Labo.</p>
+    </div>
+    <div class="hiw__grid">
+      <article class="hiw__card">
+        <div class="step-num step-num--pink">1</div>
+        <h3>Choisis ton labo</h3>
+        <p class="text-base">WordPress, Canva, Illustrator… Chaque labo regroupe une série de tutoriels autour d'un outil digital.</p>
+      </article>
+      <article class="hiw__card">
+        <div class="step-num step-num--green">2</div>
+        <h3>Suis les tutoriels</h3>
+        <p class="text-base">Articles ou vidéos, selon ton style d'apprentissage. À ton rythme, sans pression.</p>
+      </article>
+      <article class="hiw__card">
+        <div class="step-num step-num--blue">3</div>
+        <h3>Débloque ta carte</h3>
+        <p class="text-base">Passe le quiz à la fin du module : 70 % de bonnes réponses et tu débloques une carte du jeu.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ======================= LES UNIVERS (bande teal) ======================= -->
+  <section class="univers" id="univers">
+    <div class="sec-head sec-head--h3">
+      <h2>Les univers du Labo à explorer</h2>
+      <p class="text-base">Chaque labo réunit ses tutos autour d'un outil clé du digital et de la création.</p>
+    </div>
+    <div class="univers__grid">
+      <article class="univers__card">
+        <div class="univers__media univers__media--wp">WP</div>
+        <h3>Le labo Wordpress</h3>
+        <p class="text-base">Construis ton site, gère ton SEO, sécurise ta plateforme. Cinq tutoriels autour des plugins essentiels.</p>
+        <a class="btn btn--green" href="tutos.html?univers=wordpress">Disponible</a>
+      </article>
+      <article class="univers__card">
+        <div class="univers__media univers__media--canva">Canva</div>
+        <h3>Le labo Canva</h3>
+        <p class="text-base">Maîtrise la création graphique, du design au branding, sans logiciel compliqué.</p>
+        <button class="btn btn--disabled" disabled>Bientôt disponible</button>
+      </article>
+      <article class="univers__card">
+        <div class="univers__media univers__media--ai">Ai</div>
+        <h3>Le labo Illustrator</h3>
+        <p class="text-base">Crée des illustrations vectorielles comme un·e pro, étape par étape.</p>
+        <button class="btn btn--disabled" disabled>Bientôt disponible</button>
+      </article>
+      <svg class="univers__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </div>
+  </section>
+
+  <!-- ======================= COLLECTIONNE TES CARTES (bande dark) ======================= -->
+  <section class="cards-band">
+    <div class="band band--dark">
+      <div class="cards-band__text">
+        <span class="subtitle">apprends en jouant</span>
+        <h2>Collectionne tes cartes</h2>
+        <p class="text-base">Inspiré du jeu des 7 familles. Chaque tutoriel terminé te fait gagner une carte à collectionner : un concept, un outil ou une notion à mémoriser sans effort.</p>
+        <a class="btn btn--blue" href="inscription.html">Commencer à collectionner</a>
+      </div>
+      <img class="cards-band__fan" src="assets/img/cartes-fan.png" alt="Trois cartes du jeu : Elementor, All in one, SecuPress">
+    </div>
+  </section>
+
+  <!-- ======================= ARTICLE VEDETTE (bande verte) ======================= -->
+  <section class="feature">
+    <div class="band band--green">
+      <span class="feature__badge">Nouveau</span>
+      <img class="feature__img" src="assets/img/article-elementor.png" alt="">
+      <div class="feature__text">
+        <h3>Elementor pour débutants : 3 erreurs à éviter</h3>
+        <p class="text-base">Les pièges classiques quand on découvre Elementor, et comment les corriger.</p>
+      </div>
+      <a class="btn btn--primary feature__cta" href="article.html">Lire l'article</a>
+    </div>
+  </section>
+
+  <!-- ======================= 2 ARTICLES ======================= -->
+  <section class="articles">
+    <div class="articles__grid">
+      <article class="article-card">
+        <span class="article-card__badge">Nouveau</span>
+        <img class="article-card__img" src="assets/img/article-wordpress.png" alt="">
+        <h3>WordPress ou pas ? Bien choisir avant de créer ton site</h3>
+        <p class="text-base">Le guide simple pour savoir si WordPress est fait pour ton projet.</p>
+        <a class="btn btn--primary" href="article.html">Lire l'article</a>
+      </article>
+      <article class="article-card">
+        <img class="article-card__img" src="assets/img/article-menu.png" alt="">
+        <h3>Créer un menu de navigation clair sur WordPress</h3>
+        <p class="text-base">Apprends à construire un menu intuitif qui aide tes visiteurs.</p>
+        <a class="btn btn--primary" href="article.html">Lire l'article</a>
+      </article>
+    </div>
+    <div class="articles__more">
+      <a class="btn btn--secondary" href="blog.html">Voir plus d'articles</a>
+    </div>
+  </section>
+
+  <!-- ======================= CTA ROSE ======================= -->
+  <section class="cta">
+    <div class="band band--pink">
+      <div class="cta__text">
+        <span class="subtitle">pret·e a commencer</span>
+        <h2>Rejoins LE LABO</h2>
+        <p class="text-base">Crée ton compte gratuit et commence à apprendre, et collectionner. Donne vie à ton propre chat : choisis sa couleur, ses taches, son style, et partage ta progression avec la communauté.</p>
+        <a class="btn btn--primary" href="inscription.html">Créer un compte</a>
+      </div>
+      <img class="cta__cat" src="assets/img/marie.svg" alt="">
+    </div>
+  </section>
+
+  <!-- ======================= FOOTER (injecté par layout.js) ======================= -->
+  <div data-footer></div>
+
+  <script src="assets/js/avatar.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script>
+    // Données structurées : identité du site (schema.org)
+    if (window.LeLaboSEO) {
+      LeLaboSEO.jsonld({
+        '@context': 'https://schema.org', '@type': 'Organization',
+        name: 'Le Labo', url: LeLaboSEO.BASE,
+        logo: LeLaboSEO.BASE + '/assets/img/logo-cat.svg',
+        description: "Plateforme pédagogique de tutoriels web et design : WordPress, Canva et Illustrator, avec quiz et cartes à collectionner."
+      });
+      LeLaboSEO.jsonld({
+        '@context': 'https://schema.org', '@type': 'WebSite',
+        name: 'Le Labo', url: LeLaboSEO.BASE, inLanguage: 'fr',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: LeLaboSEO.BASE + '/tutos.html?q={search_term_string}',
+          'query-input': 'required name=search_term_string'
+        }
+      });
+    }
+  </script>
+</body>
+</html>

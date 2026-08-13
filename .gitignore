@@ -1,0 +1,28 @@
+# ===== Fichiers exclus du depot =====
+
+# Masters video en qualite d'origine : trop lourds pour GitHub
+# (limite de 100 Mo par fichier). Les versions web allegees, elles,
+# sont bien versionnees dans assets/video/.
+_masters-video/
+
+# Les sources video brutes, ou qu'elles soient
+*.mov
+*.mkv
+*.avi
+
+# Fichiers systeme
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Editeurs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dependances et sorties de build eventuelles
+node_modules/
+dist/
+.cache/

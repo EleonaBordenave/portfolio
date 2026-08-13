@@ -1,0 +1,929 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <!-- ===== REGLAGES DE BASE ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== REFERENCEMENT ET PARTAGE ===== -->
+    <meta name="description" content="Une plateforme pour apprendre WordPress, pensée de bout en bout : identité de marque, maquette Figma, avatars illustrés personnalisables, cartes à collectionner et stratégie de contenu.">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Eleona Bordenave">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Le Labo, plateforme pédagogique">
+    <meta property="og:description" content="Une plateforme pour apprendre WordPress, pensée de bout en bout : identité de marque, maquette Figma, avatars illustrés personnalisables, cartes à collectionner et stratégie de contenu.">
+    <meta property="og:url" content="https://eleonabordenave.fr/projets/le-labo.html">
+    <meta property="og:image" content="https://eleonabordenave.fr/assets/images/favicon.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- ===== FIN REFERENCEMENT ===== -->
+    <title>Eleona Bordenave - Le Labo</title>
+
+    <!-- ===== POLICES GOOGLE FONTS ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Cormorant:wght@400;500;600&family=Cormorant+Unicase:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <!-- Les polices du Labo, pour montrer sa charte telle quelle.
+         La manuscrite Bimbo est chargee en @font-face dans style.css -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- ===== FEUILLE DE STYLE ===== -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+
+
+    <!-- ============================================
+         HEADER / NAVBAR  (chemins en ../ : on est dans /projets)
+         ============================================ -->
+    <header class="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo_1.svg" alt="Eleona Bordenave">
+        </a>
+
+        <button class="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-links">
+            <a href="../index.html#carte">Voir la carte</a>
+            <a href="../a-propos.html">À propos</a>
+            <a href="../projets.html">Projets</a>
+            <a href="../competences.html">Compétences</a>
+            <a href="../contact.html" class="btn btn-nav">On travaille ensemble ?</a>
+        </nav>
+    </header>
+
+
+<main>
+
+    <!-- ============================================
+         1. HERO : poser le decor en trois secondes
+         ============================================ -->
+    <section class="etude-hero">
+        <div class="conteneur">
+
+            <a class="etude-retour" href="../projets.html">← Tous les projets</a>
+
+            <div class="etude-hero-grille">
+
+                <div class="etude-hero-texte">
+                    <p class="etude-label">La suggestion du chef</p>
+                    <h1 class="hero">Le Labo</h1>
+                    <p class="manuscrite etude-accroche">Apprendre le digital et la com' graphique en s'amusant</p>
+                    <p class="etude-texte">
+                        Des tutos clairs, des cartes à collectionner, et zéro prise de tête.
+                        Une plateforme pédagogique pensée de bout en bout : identité de marque,
+                        UX/UI, mascotte illustrée et stratégie de contenu.
+                    </p>
+                    <div class="etude-boutons">
+                        <a class="btn btn-secondaire" href="https://le-labo-eleona.pages.dev/" target="_blank" rel="noopener">Voir le site en ligne</a>
+                        <a class="btn btn-projet" href="#maquette">Voir la maquette</a>
+                    </div>
+                </div>
+
+                <div class="etude-hero-visuel">
+                    <img src="../assets/images/la_labo_banniere.jpg" alt="Bannière du projet Le Labo">
+                </div>
+
+            </div>
+
+            <!-- Ligne de meta : repond tout de suite aux questions du recruteur -->
+            <dl class="etude-meta">
+                <div class="etude-meta-item">
+                    <dt>Cadre</dt>
+                    <dd>Projet scolaire, Normandie Web School</dd>
+                </div>
+                <div class="etude-meta-item">
+                    <dt>Spécialisation</dt>
+                    <dd>Communication graphique et digitale</dd>
+                </div>
+                <div class="etude-meta-item">
+                    <dt>Rôle</dt>
+                    <dd>Conception globale : identité, UX/UI, illustration, contenu</dd>
+                </div>
+                <div class="etude-meta-item">
+                    <dt>Outils</dt>
+                    <dd>Figma, Illustrator, Canva, After Effects, CapCut, WordPress, Pinterest, Claude</dd>
+                </div>
+            </dl>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         2. LE BRIEF : la contrainte de depart
+         ============================================ -->
+    <section class="etude-section">
+        <div class="conteneur">
+
+            <p class="etude-label">Le brief</p>
+            <h2 class="etude-titre">La commande de départ</h2>
+            <p class="etude-texte etude-texte-large">
+                Créer cinq tutoriels sur un thème lié à ma spécialisation, déclinés sous trois
+                formats différents, puis concevoir un site pour les regrouper et les partager.
+                Tout ce qui suit découle de cette contrainte.
+            </p>
+
+            <div class="etude-trio">
+
+                <article class="etude-format">
+                    <div class="etude-format-visuel">
+                        <img src="../assets/images/yoastseo.jpg" alt="Tutoriel Yoast SEO" loading="lazy">
+                    </div>
+                    <h3 class="etude-format-titre">Le screencast vidéo</h3>
+                    <p class="etude-format-desc">Capture d'écran commentée : on suit la manipulation en direct, pas à pas.</p>
+                </article>
+
+                <article class="etude-format">
+                    <div class="etude-format-visuel">
+                        <img src="../assets/images/secupress.jpg" alt="Tutoriel SecuPress" loading="lazy">
+                    </div>
+                    <h3 class="etude-format-titre">L'animation motion design</h3>
+                    <p class="etude-format-desc">Les notions abstraites deviennent visuelles et se mémorisent plus vite.</p>
+                </article>
+
+                <article class="etude-format">
+                    <div class="etude-format-visuel">
+                        <img src="../assets/images/elementor.jpg" alt="Tutoriel Elementor" loading="lazy">
+                    </div>
+                    <h3 class="etude-format-titre">Le module illustré</h3>
+                    <p class="etude-format-desc">Texte et images à la manière d'OpenClassrooms, pour lire à son rythme.</p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         3. LES TUTOS : les livrables, format par format
+         (ancre utilisee par le filtre "Video et motion")
+         ============================================ -->
+    <section class="etude-section" id="video">
+        <div class="conteneur">
+
+            <p class="etude-label">Les tutos</p>
+            <h2 class="etude-titre">Cinq tutoriels, trois formats</h2>
+            <p class="etude-texte etude-texte-large">
+                Chaque notion est traitée dans le format qui lui convient : un module
+                illustré pour ce qui se lit à son rythme, une capture d'écran commentée
+                pour ce qui se montre, une animation pour ce qui s'explique.
+            </p>
+
+            <!-- Une carte par tutoriel : le format et le pitch d'un cote, le
+                 livrable de l'autre. On alterne les cotes pour le rythme. -->
+            <div class="labo-tutos">
+
+                <div class="labo-tuto">
+                    <div class="labo-tuto-texte">
+                        <p class="labo-tuto-format">Le module illustré</p>
+                        <h3 class="labo-tuto-titre">Construis ton site simplement avec Elementor</h3>
+                        <p class="etude-texte">
+                            La méthode : on avance point par point, chaque étape appuyée d'une
+                            capture d'écran commentée, pour qu'on puisse suivre en faisant.
+                            Loki et Neige interviennent en cours de route, le temps de souligner
+                            un piège ou de glisser une astuce. C'est ce qui rend la lecture
+                            ludique sans lui retirer sa rigueur pédagogique.
+                        </p>
+                        <a class="btn btn-projet" href="https://le-labo-eleona.pages.dev/tuto?id=elementor" target="_blank" rel="noopener">Ouvrir le tutoriel</a>
+                    <div class="labo-outils"><span class="labo-outils-label">Outils</span>
+                        <img class="labo-outil" src="../assets/images/outils/illustrator.svg" alt="Illustrator" title="Illustrator" loading="lazy">
+                        <img class="labo-outil" src="../assets/images/outils/canva.svg" alt="Canva" title="Canva" loading="lazy">
+                        <img class="labo-outil" src="../assets/images/outils/wordpress.svg" alt="WordPress" title="WordPress" loading="lazy">
+                    </div>
+                    </div>
+                    <!-- La vraie page du tuto, rognee de son en-tete de site -->
+                    <div class="labo-tuto-cadre labo-tuto-cadre-site">
+                        <iframe src="https://le-labo-eleona.pages.dev/tuto?id=elementor"
+                                title="Aperçu du tutoriel Elementor" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Les videos : meme carte, avec la methode puis les trois
+                     tutoriels alignes -->
+                <div class="labo-tuto labo-tuto-videos">
+
+                    <div class="labo-tuto-texte">
+                        <p class="labo-tuto-format">Le screencast et le motion design</p>
+                        <h3 class="labo-tuto-titre">Montrer plutôt que décrire</h3>
+                        <p class="etude-texte">
+                            Le screencast filme la manipulation en direct, le motion design
+                            met en images ce qui n'existe qu'en théorie. Montage sur CapCut,
+                            animation sur After Effects. Loki et Neige prêtent leur voix off :
+                            ce sont eux qui expliquent, ce qui garde le ton léger même sur les
+                            notions techniques. Tout est sous-titré, et le vocabulaire reste
+                            volontairement simple, sans trop de jargon.
+                        </p>
+                        <div class="labo-outils"><span class="labo-outils-label">Outils</span>
+                            <img class="labo-outil" src="../assets/images/outils/illustrator.svg" alt="Illustrator" title="Illustrator" loading="lazy">
+                            <img class="labo-outil" src="../assets/images/outils/capcut.svg" alt="CapCut" title="CapCut" loading="lazy">
+                            <img class="labo-outil" src="../assets/images/outils/aftereffects.svg" alt="After Effects" title="After Effects" loading="lazy">
+                        </div>
+                    </div>
+
+            <!-- Les trois tutos video sur une ligne, texte sous la video -->
+            <div class="labo-videos">
+
+                <figure class="labo-video">
+                    <div class="labo-tuto-cadre labo-tuto-cadre-video">
+                        <iframe src="https://www.youtube-nocookie.com/embed/9BKLgnrnRPA"
+                                title="Muscle ton référencement avec Yoast SEO"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <figcaption>
+                        <h3 class="labo-tuto-titre">Muscle ton référencement avec Yoast SEO</h3>
+                        <p class="etude-texte">
+                            Le plugin qui t'aide à être plus visible sur Google, sans te prendre
+                            la tête. On suit la manipulation en direct, pas à pas. Quinze minutes.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <figure class="labo-video">
+                    <div class="labo-tuto-cadre labo-tuto-cadre-video">
+                        <iframe src="https://www.youtube-nocookie.com/embed/ypUGJ91ZBvc"
+                                title="Protège ton site comme un pro avec SecuPress"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <figcaption>
+                        <h3 class="labo-tuto-titre">Protège ton site comme un pro avec SecuPress</h3>
+                        <p class="etude-texte">
+                            Les essentiels pour sécuriser ton WordPress. Les notions abstraites
+                            deviennent visuelles et se mémorisent plus vite. Dix minutes.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <figure class="labo-video">
+                    <div class="labo-tuto-cadre labo-tuto-cadre-video">
+                        <iframe src="https://www.youtube-nocookie.com/embed/l_hsuBc5Uj8"
+                                title="Dors sur tes deux oreilles grâce à All in one"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <figcaption>
+                        <h3 class="labo-tuto-titre">Dors sur tes deux oreilles grâce à All in one</h3>
+                        <p class="etude-texte">
+                            Parce qu'un bug arrive vite, et qu'une sauvegarde, ça sauve tout.
+                            Migrer ou restaurer tout son site en quelques clics. Huit minutes.
+                        </p>
+                    </figcaption>
+                </figure>
+
+            </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         4. LE CONCEPT : le parti pris
+         ============================================ -->
+    <section class="etude-section etude-section-sombre labo-section-mascottes">
+        <div class="conteneur">
+
+            <!-- Loki et Neige, poses dans la moitie droite de la section -->
+            <div class="labo-mascottes">
+                <figure class="labo-mascotte labo-mascotte-loki">
+                    <img src="../assets/images/loki.png" alt="Loki, la mascotte du Labo" loading="lazy">
+                    <figcaption>Loki</figcaption>
+                </figure>
+                <figure class="labo-mascotte labo-mascotte-neige">
+                    <img src="../assets/images/neige.png" alt="Neige, l'acolyte de Loki" loading="lazy">
+                    <figcaption>Neige</figcaption>
+                </figure>
+            </div>
+
+            <p class="etude-label">Le concept</p>
+            <h2 class="etude-titre">Dédramatiser l'apprentissage par le jeu</h2>
+            <p class="etude-texte etude-texte-large">
+                Apprendre le digital fait peur. Mon parti pris : retirer la pression et remettre
+                du plaisir. Une mascotte attachante accompagne l'apprenant, chaque module réussi
+                déverrouille une carte à collectionner, et la progression se fait sans jugement
+                ni compte à rebours. On comprend, on pratique, on mémorise.
+            </p>
+
+            <div class="etude-piliers">
+                <div class="etude-pilier">
+                    <h3 class="etude-pilier-titre">Deux mascottes</h3>
+                    <p>Loki et Neige accompagnent l'apprenant du premier tuto au dernier quiz.</p>
+                </div>
+                <div class="etude-pilier">
+                    <h3 class="etude-pilier-titre">Une collection</h3>
+                    <p>70 % de réussite au quiz déverrouille une carte du jeu des 7 familles.</p>
+                </div>
+                <div class="etude-pilier">
+                    <h3 class="etude-pilier-titre">Sans pression</h3>
+                    <p>Aucun classement, aucun chrono : on avance à son rythme.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         5. LES AVATARS : module interactif
+         A gauche quatre avatars deja composes, a droite l'editeur.
+         (ancre utilisee par le filtre "Illustration et iconographie")
+         ============================================ -->
+    <section class="etude-section" id="illustration">
+        <div class="conteneur">
+
+            <p class="etude-label">Les avatars</p>
+            <h2 class="etude-titre">Donnez vie à votre chat</h2>
+            <p class="etude-texte etude-texte-large">
+                Chaque apprenant compose son compagnon : couleur du pelage, taches, regard et
+                humeur. Essayez ici, sans compte ni inscription.
+            </p>
+
+            <div class="labo-outils"><span class="labo-outils-label">Outils</span>
+                <img class="labo-outil" src="../assets/images/outils/illustrator.svg" alt="Illustrator" title="Illustrator" loading="lazy">
+            </div>
+
+            <div class="labo-avatars-grille">
+
+                <!-- Quatre avatars deja composes -->
+                <div class="labo-avatars-vitrine">
+                    <img src="../assets/images/avatar1.png" alt="" loading="lazy">
+                    <img src="../assets/images/avatar2.png" alt="" loading="lazy">
+                    <img src="../assets/images/avatar3.png" alt="" loading="lazy">
+                    <img src="../assets/images/avatar4.png" alt="" loading="lazy">
+                </div>
+
+                <!-- L'editeur d'avatar du Labo, repris de la maquette :
+                     apercu a gauche sur un fond de theme, onglets a droite.
+                     Les tuiles d'options et les pastilles sont fabriquees
+                     par le script (js/script.js), qui empile les memes
+                     calques SVG que le site reel. -->
+                <div class="avatar-editeur" id="etude-avatar" data-dossier="../assets/avatar/">
+
+                    <div class="avatar-scene-colonne">
+                        <div class="avatar-scene" data-theme="pink">
+                            <div class="avatar-pile" data-pile="principal"></div>
+                        </div>
+                        <div class="avatar-themes">
+                            <button type="button" class="avatar-theme actif" data-cible="theme" data-valeur="pink" aria-label="Fond rose"></button>
+                            <button type="button" class="avatar-theme" data-cible="theme" data-valeur="green" aria-label="Fond vert"></button>
+                            <button type="button" class="avatar-theme" data-cible="theme" data-valeur="blue" aria-label="Fond bleu"></button>
+                        </div>
+                        <button type="button" class="avatar-hasard" id="avatar-hasard">Au hasard</button>
+                    </div>
+
+                    <div class="avatar-panneaux">
+
+                        <div class="avatar-onglets">
+                            <button type="button" class="avatar-onglet actif" data-onglet="fourrure">Fourrure</button>
+                            <button type="button" class="avatar-onglet" data-onglet="taches">Tâches</button>
+                            <button type="button" class="avatar-onglet" data-onglet="yeux">Yeux</button>
+                            <button type="button" class="avatar-onglet" data-onglet="bouche">Bouche</button>
+                        </div>
+
+                        <div class="avatar-panneau" data-panneau="fourrure">
+                            <div class="avatar-pastilles" data-liste="fourrure"></div>
+                        </div>
+
+                        <div class="avatar-panneau" data-panneau="taches" hidden>
+                            <div class="avatar-tuiles" data-liste="taches"></div>
+                            <p class="avatar-palette-titre">Couleur de <strong data-tache-active></strong></p>
+                            <div class="avatar-pastilles" data-liste="tacheCouleur"></div>
+                        </div>
+
+                        <div class="avatar-panneau" data-panneau="yeux" hidden>
+                            <div class="avatar-tuiles" data-liste="yeux"></div>
+                        </div>
+
+                        <div class="avatar-panneau" data-panneau="bouche" hidden>
+                            <div class="avatar-tuiles" data-liste="bouche"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         6. LA CONCEPTION : la demarche, avant le resultat
+         ============================================ -->
+    <section class="etude-section">
+        <div class="conteneur">
+
+            <p class="etude-label">La conception</p>
+            <h2 class="etude-titre">La planche de tendance</h2>
+            <p class="etude-texte etude-texte-large">
+                Le résultat final ne sort pas de nulle part. Voici la direction posée
+                avant la première maquette.
+            </p>
+
+            <div class="labo-outils"><span class="labo-outils-label">Outils</span>
+                <img class="labo-outil" src="../assets/images/outils/pinterest.svg" alt="Pinterest" title="Pinterest" loading="lazy">
+            </div>
+
+            <!-- Carte : la planche a gauche, ce qu'elle fixe a droite -->
+            <div class="labo-planche">
+                <div class="labo-planche-visuel">
+                    <img src="../assets/images/planche_de_tendance.jpg" alt="Planche de tendance du projet Le Labo" loading="lazy">
+                </div>
+                <div class="labo-planche-texte">
+                    <dl class="labo-tendance">
+                        <div class="labo-tendance-item">
+                            <dt>Univers félin et mascottes</dt>
+                            <dd>Des personnages expressifs, à l'image de Loki et Neige, pour incarner la marque et créer de l'attachement.</dd>
+                        </div>
+                        <div class="labo-tendance-item">
+                            <dt>Couleurs</dt>
+                            <dd>Une base crème douce relevée de pastels et de couleurs vives : rose, vert, bleu, jaune. Chaleureux, jeune et non intimidant.</dd>
+                        </div>
+                        <div class="labo-tendance-item">
+                            <dt>Typographie</dt>
+                            <dd>Des titres affirmés et gras, associés à une touche manuscrite pour le côté spontané.</dd>
+                        </div>
+                        <div class="labo-tendance-item">
+                            <dt>Formes</dt>
+                            <dd>Coins arrondis, cartes et gros boutons pilule, pour une interface qui respire et reste accessible.</dd>
+                        </div>
+                        <div class="labo-tendance-item">
+                            <dt>Ton</dt>
+                            <dd>Illustratif et joueur, fidèle à la promesse « apprendre en s'amusant ».</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         7. LA DIRECTION ARTISTIQUE
+         (ancre utilisee par le filtre "Identite visuelle")
+         ============================================ -->
+    <section class="etude-section etude-section-sombre" id="identite-visuelle">
+        <div class="conteneur">
+
+            <p class="etude-label">La direction artistique</p>
+            <h2 class="etude-titre">Charte graphique</h2>
+
+            <div class="labo-outils"><span class="labo-outils-label">Outils</span>
+                    <img class="labo-outil" src="../assets/images/outils/illustrator.svg" alt="Illustrator" title="Illustrator" loading="lazy">
+            </div>
+
+            <div class="etude-da">
+
+                <!-- Logo -->
+                <div class="etude-da-bloc">
+                    <h3 class="etude-da-titre">Le logo</h3>
+                    <div class="labo-logo-scene">
+                        <img src="../assets/images/labo-logo-cat.png" alt="Logo Le Labo" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Les deux mascottes -->
+                <div class="etude-da-bloc">
+                    <h3 class="etude-da-titre">Les mascottes</h3>
+                    <div class="etude-mascottes">
+                        <figure class="etude-mascotte">
+                            <img src="../assets/images/loki.png" alt="Loki" loading="lazy">
+                        </figure>
+                        <figure class="etude-mascotte">
+                            <img src="../assets/images/neige.png" alt="Neige" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Palette : les cinq teintes du design system -->
+                <div class="etude-da-bloc">
+                    <h3 class="etude-da-titre">La palette</h3>
+                    <div class="etude-palette">
+                        <div class="etude-couleur" style="--teinte:#F1D0D0"><span>Rose #F1D0D0</span></div>
+                        <div class="etude-couleur" style="--teinte:#B4D8A2"><span>Vert #B4D8A2</span></div>
+                        <div class="etude-couleur" style="--teinte:#9FDBE8"><span>Bleu #9FDBE8</span></div>
+                        <div class="etude-couleur" style="--teinte:#F0D8A8"><span>Sable #F0D8A8</span></div>
+                        <div class="etude-couleur" style="--teinte:#F8F5ED"><span>Crème #F8F5ED</span></div>
+                    </div>
+                    <p class="etude-da-note">Une base crème douce, relevée de pastels : chaleureux, jeune et non intimidant.</p>
+                </div>
+
+                <!-- Typographies : les trois polices reellement utilisees -->
+                <div class="etude-da-bloc">
+                    <h3 class="etude-da-titre">Les typographies</h3>
+                    <div class="etude-typo">
+                        <p class="etude-typo-echantillon labo-police-titre">Anton</p>
+                        <p class="etude-typo-nom">Titrage : affirmé et gras</p>
+                    </div>
+                    <div class="etude-typo">
+                        <p class="etude-typo-echantillon labo-police-texte">Nunito</p>
+                        <p class="etude-typo-nom">Courante : ronde et lisible</p>
+                    </div>
+                    <div class="etude-typo">
+                        <p class="etude-typo-echantillon labo-police-manuscrite">Bimbo</p>
+                        <p class="etude-typo-nom">Manuscrite : la touche spontanée</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         8. LA MAQUETTE FIGMA
+         ============================================ -->
+    <section class="etude-section" id="maquette">
+        <div class="conteneur">
+
+            <p class="etude-label">La maquette</p>
+            <h2 class="etude-titre">Naviguer dans le prototype</h2>
+            <p class="etude-texte etude-texte-large">
+                La maquette complète, directement dans la page : cliquez dans l'aperçu pour
+                circuler d'un écran à l'autre, comme sur le site réel.
+            </p>
+
+            <div class="labo-outils"><span class="labo-outils-label">Outils</span>
+                <img class="labo-outil" src="../assets/images/outils/figma.svg" alt="Figma" title="Figma" loading="lazy">
+            </div>
+
+            <div class="etude-figma">
+                <iframe
+                    title="Maquette Figma du projet Le Labo"
+                    src="https://embed.figma.com/design/1MW2KFbpnUAG5dz8ZTWeOk/Le-labo?node-id=0-1&embed-host=share"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="etude-boutons etude-boutons-centre">
+                <a class="btn btn-projet" href="https://www.figma.com/design/1MW2KFbpnUAG5dz8ZTWeOk/Le-labo?node-id=0-1" target="_blank" rel="noopener">Ouvrir dans Figma</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         9. LES CARTES A COLLECTIONNER
+         ============================================ -->
+    <section class="etude-section" id="collection">
+        <div class="conteneur">
+
+            <!-- Le texte a gauche, l'eventail des cartes reelles a droite -->
+            <div class="labo-collection-entete">
+                <div class="labo-collection-texte">
+                    <p class="etude-label">La collection</p>
+                    <h2 class="etude-titre">Les cartes à collectionner</h2>
+                    <p class="etude-texte">
+                        Sur le principe du jeu des 7 familles : chaque module terminé avec au moins
+                        70 % de réussite déverrouille une carte représentant un concept, un outil
+                        ou une notion. Voici la famille Wordpress au complet.
+                    </p>
+                </div>
+                <div class="labo-collection-visuel">
+                    <img src="../assets/images/labo-cartes-fan.png" alt="Trois cartes du Labo disposées en éventail" loading="lazy">
+                </div>
+            </div>
+
+            <div class="labo-cartes" id="etude-cartes">
+
+                <article class="labo-carte" data-carte style="--banniere:#A5003C">
+                    <header class="labo-carte-entete">
+                        <span class="labo-carte-famille">Le labo Wordpress</span>
+                        <span class="labo-carte-nom">Elementor</span>
+                    </header>
+                    <div class="labo-carte-banniere">
+                        <img src="../assets/images/labo-carte-elementor.png" alt="Elementor" loading="lazy">
+                    </div>
+                    <p class="labo-carte-fratrie">WPForms - Yoast SEO - All in one - SecuPress</p>
+                    <h4 class="labo-carte-soustitre">Ce qu'on apprend à faire</h4>
+                    <p class="labo-carte-texte">Créer des mises en page complètes sans coder, en déplaçant des blocs.</p>
+                    <h4 class="labo-carte-soustitre">Le savais-tu ?</h4>
+                    <p class="labo-carte-texte">Plus de 5 millions de sites tournent avec Elementor, le page builder le plus utilisé.</p>
+                </article>
+
+                <article class="labo-carte" data-carte style="--banniere:#9FDBE8">
+                    <header class="labo-carte-entete">
+                        <span class="labo-carte-famille">Le labo Wordpress</span>
+                        <span class="labo-carte-nom">All in one</span>
+                    </header>
+                    <div class="labo-carte-banniere">
+                        <img src="../assets/images/labo-carte-allinone-droit.png" alt="All in One WP Migration" loading="lazy">
+                    </div>
+                    <p class="labo-carte-fratrie">Elementor - WPForms - Yoast SEO - SecuPress</p>
+                    <h4 class="labo-carte-soustitre">Ce qu'on apprend à faire</h4>
+                    <p class="labo-carte-texte">Sauvegarder, migrer ou restaurer tout son site en quelques clics.</p>
+                    <h4 class="labo-carte-soustitre">Le savais-tu ?</h4>
+                    <p class="labo-carte-texte">All-in-One WP Migration déplace un site entier vers un nouvel hébergeur.</p>
+                </article>
+
+                <article class="labo-carte" data-carte style="--banniere:#F0C230">
+                    <header class="labo-carte-entete">
+                        <span class="labo-carte-famille">Le labo Wordpress</span>
+                        <span class="labo-carte-nom">SecuPress</span>
+                    </header>
+                    <div class="labo-carte-banniere">
+                        <img src="../assets/images/labo-carte-secupress-droit.png" alt="SecuPress" loading="lazy">
+                    </div>
+                    <p class="labo-carte-fratrie">Elementor - WPForms - Yoast SEO - All in one</p>
+                    <h4 class="labo-carte-soustitre">Ce qu'on apprend à faire</h4>
+                    <p class="labo-carte-texte">Protéger son site des attaques : bloquer les intrusions, repérer les failles.</p>
+                    <h4 class="labo-carte-soustitre">Le savais-tu ?</h4>
+                    <p class="labo-carte-texte">SecuPress scanne ton site en profondeur et te livre un rapport clair.</p>
+                </article>
+
+                <article class="labo-carte" data-carte style="--banniere:#B4D8A2">
+                    <header class="labo-carte-entete">
+                        <span class="labo-carte-famille">Le labo Wordpress</span>
+                        <span class="labo-carte-nom">Yoast SEO</span>
+                    </header>
+                    <div class="labo-carte-banniere">
+                        <img src="../assets/images/labo-tuto-yoast.png" alt="Yoast SEO" loading="lazy">
+                    </div>
+                    <p class="labo-carte-fratrie">Elementor - WPForms - All in one - SecuPress</p>
+                    <h4 class="labo-carte-soustitre">Ce qu'on apprend à faire</h4>
+                    <p class="labo-carte-texte">Optimiser ton contenu pour Google, sans connaissances techniques.</p>
+                    <h4 class="labo-carte-soustitre">Le savais-tu ?</h4>
+                    <p class="labo-carte-texte">Yoast SEO est installé sur plus de 13 millions de sites.</p>
+                </article>
+
+                <article class="labo-carte" data-carte style="--banniere:#F1D0D0">
+                    <header class="labo-carte-entete">
+                        <span class="labo-carte-famille">Le labo Wordpress</span>
+                        <span class="labo-carte-nom">WPForms</span>
+                    </header>
+                    <div class="labo-carte-banniere">
+                        <img src="../assets/images/labo-tuto-wpforms.png" alt="WPForms" loading="lazy">
+                    </div>
+                    <p class="labo-carte-fratrie">Elementor - Yoast SEO - All in one - SecuPress</p>
+                    <h4 class="labo-carte-soustitre">Ce qu'on apprend à faire</h4>
+                    <p class="labo-carte-texte">Créer des formulaires de contact simples et faciles à remplir.</p>
+                    <h4 class="labo-carte-soustitre">Le savais-tu ?</h4>
+                    <p class="labo-carte-texte">WPForms équipe plus de 6 millions de sites WordPress.</p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         10. LES RESEAUX SOCIAUX
+         (ancre utilisee par le filtre "Reseaux sociaux")
+         ============================================ -->
+    <section class="etude-section" id="reseaux">
+        <div class="conteneur">
+
+            <p class="etude-label">La déclinaison</p>
+            <h2 class="etude-titre">L'univers sur Instagram</h2>
+            <p class="etude-texte etude-texte-large">
+                Une identité ne tient la route que si elle survit hors de son site. Instagram
+                a été retenu pour toucher des débutants là où ils sont déjà, avec des formats
+                courts qui dédramatisent le jargon : carrousels pédagogiques, reel interactif
+                et stories d'annonce.
+            </p>
+
+            <div class="labo-outils"><span class="labo-outils-label">Outils</span>
+                <img class="labo-outil" src="../assets/images/outils/canva.svg" alt="Canva" title="Canva" loading="lazy">
+                <img class="labo-outil" src="../assets/images/outils/illustrator.svg" alt="Illustrator" title="Illustrator" loading="lazy">
+            </div>
+
+            <!-- Le detail de chaque publication produite -->
+            <div class="labo-publications">
+
+                <article class="labo-pub">
+                    <header class="labo-pub-entete">
+                        <span class="labo-pub-type">Carrousel</span>
+                        <span class="labo-pub-date">Mardi 1 juillet</span>
+                    </header>
+                    <h3 class="labo-pub-titre">C'est quoi un hébergement web ?</h3>
+                    <!-- Carrousel : on ne voit qu'une planche a la fois, on
+                         fait defiler avec les fleches, comme sur Instagram -->
+                    <div class="labo-pub-planches" data-carrousel>
+                        <div class="labo-pub-piste">
+                            <img src="../assets/images/social/hebergement-1.png" alt="Carrousel hébergement web, planche 1" loading="lazy">
+                            <img src="../assets/images/social/hebergement-2.png" alt="Carrousel hébergement web, planche 2" loading="lazy">
+                            <img src="../assets/images/social/hebergement-3.png" alt="Carrousel hébergement web, planche 3" loading="lazy">
+                        </div>
+                        <button type="button" class="labo-pub-fleche labo-pub-fleche-g" data-sens="-1" aria-label="Planche précédente">‹</button>
+                        <button type="button" class="labo-pub-fleche labo-pub-fleche-d" data-sens="1" aria-label="Planche suivante">›</button>
+                        <span class="labo-pub-compteur" data-compteur>1/3</span>
+                    </div>
+                    <div class="labo-pub-points" data-points>
+                        <span class="labo-pub-point actif"></span><span class="labo-pub-point"></span><span class="labo-pub-point"></span>
+                    </div>
+                    <p class="labo-pub-legende">Hébergeur, nom de domaine… ces mots te font peur ? On t'explique tout avec une simple maison. Swipe pour devenir incollable !</p>
+                    <p class="labo-pub-hashtags">#LeLabo #hébergementweb #nomdedomaine #créersonsite #tuto</p>
+                </article>
+
+                <article class="labo-pub">
+                    <header class="labo-pub-entete">
+                        <span class="labo-pub-type">Carrousel</span>
+                        <span class="labo-pub-date">Lundi 28 juillet</span>
+                    </header>
+                    <h3 class="labo-pub-titre">C'est quoi une base de données ?</h3>
+                    <div class="labo-pub-planches" data-carrousel>
+                        <div class="labo-pub-piste">
+                            <img src="../assets/images/social/bdd-1.png" alt="Carrousel base de données, planche 1" loading="lazy">
+                            <img src="../assets/images/social/bdd-2.png" alt="Carrousel base de données, planche 2" loading="lazy">
+                            <img src="../assets/images/social/bdd-3.png" alt="Carrousel base de données, planche 3" loading="lazy">
+                        </div>
+                        <button type="button" class="labo-pub-fleche labo-pub-fleche-g" data-sens="-1" aria-label="Planche précédente">‹</button>
+                        <button type="button" class="labo-pub-fleche labo-pub-fleche-d" data-sens="1" aria-label="Planche suivante">›</button>
+                        <span class="labo-pub-compteur" data-compteur>1/3</span>
+                    </div>
+                    <div class="labo-pub-points" data-points>
+                        <span class="labo-pub-point actif"></span><span class="labo-pub-point"></span><span class="labo-pub-point"></span>
+                    </div>
+                    <p class="labo-pub-legende">Base de données… ça sonne compliqué ? On t'explique avec un simple casier à dossiers et un secrétaire un peu spécial. Swipe !</p>
+                    <p class="labo-pub-hashtags">#LeLabo #basededonnées #WordPress #créersonsite #tuto</p>
+                </article>
+
+                <article class="labo-pub labo-pub-verticale">
+                    <header class="labo-pub-entete">
+                        <span class="labo-pub-type">Reel</span>
+                        <span class="labo-pub-date">Jeudi 3 juillet</span>
+                    </header>
+                    <h3 class="labo-pub-titre">Découvre ton alter ego félin</h3>
+                    <div class="labo-pub-media">
+                        <video src="../assets/video/reel-avatar.mp4" controls loop muted playsinline preload="metadata"></video>
+                    </div>
+                    <p class="labo-pub-legende">Fais une capture d'écran au hasard pour découvrir ton alter ego félin ! Partage ta capture en story et tague-nous pour qu'on voie ton résultat.</p>
+                    <p class="labo-pub-hashtags">#avatar #challenge #LeLabo #chat</p>
+                </article>
+
+                <article class="labo-pub labo-pub-verticale">
+                    <header class="labo-pub-entete">
+                        <span class="labo-pub-type">Story</span>
+                        <span class="labo-pub-date">Mardi 29 juillet</span>
+                    </header>
+                    <h3 class="labo-pub-titre">Teaser application mobile</h3>
+                    <div class="labo-pub-media">
+                        <img src="../assets/images/social/story-teaser-app.jpg" alt="Story teaser de l'application mobile" loading="lazy">
+                    </div>
+                </article>
+
+                <article class="labo-pub labo-pub-verticale">
+                    <header class="labo-pub-entete">
+                        <span class="labo-pub-type">Story</span>
+                        <span class="labo-pub-date">Lundi 4 août</span>
+                    </header>
+                    <h3 class="labo-pub-titre">Le Labo mobile</h3>
+                    <div class="labo-pub-media">
+                        <img src="../assets/images/social/story-labo-mobile.jpg" alt="Story de lancement du Labo mobile" loading="lazy">
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         11. LE SITE ET SES FONCTIONNALITES
+         ============================================ -->
+    <section class="etude-section etude-section-sombre">
+        <div class="conteneur">
+
+            <p class="etude-label">Le site</p>
+            <h2 class="etude-titre">Trois espaces, trois usages</h2>
+            <p class="etude-texte etude-texte-large">
+                L'architecture répond au cahier des charges technique : un espace ouvert à tous,
+                un espace personnel pour suivre sa progression, et une administration sécurisée.
+            </p>
+
+            <div class="labo-outils"><span class="labo-outils-label">Outils</span>
+                <img class="labo-outil" src="../assets/images/outils/figma.svg" alt="Figma" title="Figma" loading="lazy">
+                <img class="labo-outil" src="../assets/images/outils/wordpress.svg" alt="WordPress" title="WordPress" loading="lazy">
+                <img class="labo-outil" src="../assets/images/outils/illustrator.svg" alt="Illustrator" title="Illustrator" loading="lazy">
+                <img class="labo-outil" src="../assets/images/outils/canva.svg" alt="Canva" title="Canva" loading="lazy">
+                <img class="labo-outil" src="../assets/images/outils/capcut.svg" alt="CapCut" title="CapCut" loading="lazy">
+                <img class="labo-outil" src="../assets/images/outils/aftereffects.svg" alt="After Effects" title="After Effects" loading="lazy">
+                <img class="labo-outil" src="../assets/images/outils/pinterest.svg" alt="Pinterest" title="Pinterest" loading="lazy">
+                <img class="labo-outil" src="../assets/images/outils/claude.svg" alt="Claude" title="Claude" loading="lazy">
+            </div>
+
+            <div class="etude-espaces">
+
+                <article class="etude-espace">
+                    <p class="etude-espace-numero">01</p>
+                    <h3 class="etude-espace-titre">L'accueil public</h3>
+                    <p>Ouvert à tous : la présentation des labos, les articles récents et les trois étapes : comprendre, pratiquer, mémoriser.</p>
+                </article>
+
+                <article class="etude-espace">
+                    <p class="etude-espace-numero">02</p>
+                    <h3 class="etude-espace-titre">L'espace connecté</h3>
+                    <p>Le tableau de bord : progression dans les modules, score moyen aux quiz, collection de cartes et avatar personnalisé.</p>
+                </article>
+
+                <article class="etude-espace">
+                    <p class="etude-espace-numero">03</p>
+                    <h3 class="etude-espace-titre">L'administration</h3>
+                    <p>Accès sécurisé pour créer et modifier les tutoriels, les quiz et les cartes sans toucher au code.</p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         12. CONCLUSION + PROJET SUIVANT
+         ============================================ -->
+    <section class="etude-section etude-section-sombre">
+        <div class="conteneur">
+
+            <div class="cocktails-separateur"></div>
+
+            <!-- Le bilan a gauche, la carte du projet suivant a droite -->
+            <div class="etude-fin">
+
+                <div class="etude-bilan">
+                    <p class="etude-label">Le mot de la fin</p>
+                    <h2 class="etude-titre">Ce que le projet m'a appris</h2>
+                    <p class="etude-texte">
+                        Sur Le Labo, il a fallu jongler entre deux choses qui tirent dans des sens
+                        opposés : un cahier des charges technique assez carré d'un côté, et de l'autre
+                        toute la liberté d'inventer un univers. C'est ce projet qui m'a appris à
+                        trancher et à m'y tenir. Une mascotte, une promesse, un ton, et ensuite tout
+                        décliner autour sans jamais perdre le fil. Si je devais continuer, je le
+                        confronterais à de vrais débutants pour voir ce qui accroche vraiment, et je
+                        le ferais évoluer avec ce qu'ils me renvoient.
+                    </p>
+                </div>
+
+                <div class="etude-suivant">
+                    <p class="etude-suivant-label">Projet suivant</p>
+                    <article class="projet-carte projet-carte-horizontale">
+                        <div class="projet-visuel">
+                            <img src="../assets/images/racines.jpg" alt="Identité visuelle Racines" loading="lazy">
+                        </div>
+                        <div class="projet-corps">
+                            <p class="projet-cat">Identité visuelle</p>
+                            <h2 class="projet-titre">Racines - Coiffeur spécialisé</h2>
+                            <a class="btn btn-projet" href="racines.html">Voir ce projet</a>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="footer-colonne">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo_1.svg" alt="Eleona Bordenave" loading="lazy">
+            </a>
+            <p class="footer-info">PORTFOLIO Communication graphique et digitale</p>
+            <p class="footer-copyright">© 2026 Eleona Bordenave. Tous droits réservés.</p>
+        </div>
+
+        <div class="footer-colonne">
+            <h3 class="footer-titre">La carte</h3>
+            <a href="../index.html#carte">Voir la carte</a>
+            <a href="../a-propos.html">À propos</a>
+            <a href="../projets.html">Projets</a>
+            <a href="../competences.html">Compétences</a>
+            <a href="../contact.html">On travaille ensemble ?</a>
+        </div>
+
+        <div class="footer-colonne">
+            <h3 class="footer-titre">Réservations</h3>
+            <a href="mailto:e.bordenave.contact@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/eleona-bordenave-a7b608210/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="../contact.html">On travaille ensemble ?</a>
+        </div>
+    </footer>
+
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="../js/script.js"></script>
+
+</body>
+</html>
