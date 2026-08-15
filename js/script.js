@@ -432,6 +432,85 @@ if (zoneAvatar) {
         });
     }
 
+    // --- Le telechargement en PNG ---
+    // On redessine la pile de calques dans un canvas carre, sur le fond de
+    // couleur du theme choisi : l'image obtenue est exactement l'apercu.
+    const FONDS = { pink: "#F1D0D0", green: "#B4D8A2", blue: "#9FDBE8" };
+    const TAILLE_PNG = 1024;
+
+    // Les SVG d'Illustrator n'ont qu'un viewBox, pas de largeur : certains
+    // navigateurs les dessinent alors vides dans un canvas. On les relit
+    // pour leur poser une taille. Si la lecture echoue (page ouverte en
+    // local, sans serveur), on retombe sur l'URL du fichier.
+    const sourceCalque = (url, cote) =>
+        fetch(url)
+            .then((r) => (r.ok ? r.text() : Promise.reject()))
+            .then((texte) => {
+                const svg = new DOMParser().parseFromString(texte, "image/svg+xml").documentElement;
+                svg.setAttribute("width", cote);
+                svg.setAttribute("height", cote);
+                return "data:image/svg+xml;charset=utf-8," +
+                    encodeURIComponent(new XMLSerializer().serializeToString(svg));
+            })
+            .catch(() => url);
+
+    const dessinerCalque = (ctx, src, marge, cote) => new Promise((resoudre, rejeter) => {
+        const img = new Image();
+        img.onload = () => { ctx.drawImage(img, marge, marge, cote, cote); resoudre(); };
+        img.onerror = rejeter;
+        img.src = src;
+    });
+
+    const fabriquerPNG = async () => {
+        const canvas = document.createElement("canvas");
+        canvas.width = TAILLE_PNG;
+        canvas.height = TAILLE_PNG;
+        const ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = FONDS[config.theme] || FONDS.pink;
+        ctx.fillRect(0, 0, TAILLE_PNG, TAILLE_PNG);
+
+        // Meme respiration qu'a l'ecran : 12% de marge de chaque cote
+        const marge = TAILLE_PNG * 0.12;
+        const cote = TAILLE_PNG - marge * 2;
+
+        // Les calques deja empiles dans l'apercu, dans le meme ordre
+        const fichiers = Array.from(pilePrincipale.querySelectorAll("img"))
+            .map((img) => img.getAttribute("src"));
+
+        for (const fichier of fichiers) {
+            await dessinerCalque(ctx, await sourceCalque(fichier, cote), marge, cote);
+        }
+        return canvas;
+    };
+
+    const boutonPNG = zoneAvatar.querySelector("#avatar-telecharger");
+    if (boutonPNG) {
+        const libelle = boutonPNG.textContent;
+
+        boutonPNG.addEventListener("click", async () => {
+            boutonPNG.disabled = true;
+            boutonPNG.textContent = "Préparation...";
+            try {
+                const canvas = await fabriquerPNG();
+                const blob = await new Promise((resoudre, rejeter) => {
+                    canvas.toBlob((b) => (b ? resoudre(b) : rejeter()), "image/png");
+                });
+                const url = URL.createObjectURL(blob);
+                const lien = document.createElement("a");
+                lien.href = url;
+                lien.download = "mon-chat-le-labo.png";
+                lien.click();
+                setTimeout(() => URL.revokeObjectURL(url), 1000);
+                boutonPNG.textContent = libelle;
+            } catch (e) {
+                boutonPNG.textContent = "Téléchargement impossible";
+                setTimeout(() => { boutonPNG.textContent = libelle; }, 2500);
+            }
+            boutonPNG.disabled = false;
+        });
+    }
+
     dessiner();
 }
 // ===== FORMULAIRE DE CONTACT (page contact) =====

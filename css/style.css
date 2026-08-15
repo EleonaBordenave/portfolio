@@ -130,28 +130,29 @@ p {
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Bouton principal : or sur rouge profond */
+/* Bouton principal : rouge profond sur or, plein, c'est l'action mise en
+   avant. Le secondaire prend le contour, plus discret. */
 .btn-principal {
-    color: var(--or);
-    border-color: var(--or);
-    background-color: var(--rouge-profond);
+    color: var(--rouge-profond);
+    border-color: var(--rouge-profond);
+    background-color: var(--or);
 }
 .btn-principal:hover {
-    color: var(--rouge-profond);
-    border-color: var(--rouge-profond);
-    background-color: var(--or);
-}
-
-/* Bouton secondaire : rouge profond sur or */
-.btn-secondaire {
-    color: var(--rouge-profond);
-    border-color: var(--rouge-profond);
-    background-color: var(--or);
-}
-.btn-secondaire:hover {
     color: var(--or);
     border-color: var(--or);
     background-color: var(--rouge-profond);
+}
+
+/* Bouton secondaire : or sur rouge profond */
+.btn-secondaire {
+    color: var(--or);
+    border-color: var(--or);
+    background-color: var(--rouge-profond);
+}
+.btn-secondaire:hover {
+    color: var(--rouge-profond);
+    border-color: var(--rouge-profond);
+    background-color: var(--or);
 }
 
 /* Autre bouton : dore sur papier */
@@ -716,8 +717,14 @@ p {
 }
 
 /* Le ticket */
+/* Le fond reste le creme uni. La texture de papier froisse vient
+   par-dessus, dans un calque a part : son intensite se regle sur une
+   seule ligne, --texture-force (0 = pas de texture, 1 = a fond). */
 .ticket {
+    --texture-force: 0.45;
+
     position: relative;
+    isolation: isolate;
     width: 100%;
     max-width: 360px;
     background-color: var(--papier);
@@ -726,6 +733,25 @@ p {
     text-align: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
+
+/* Le calque de texture : en fusion "multiply", il creuse les plis du
+   papier sans delaver le creme qui reste dessous */
+.ticket::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: url("../assets/images/texture-ticket.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+    opacity: var(--texture-force);
+    pointer-events: none;
+}
+
+/* Le contenu repasse au-dessus du calque de texture */
+.ticket > * { position: relative; z-index: 1; }
 
 /* Variante du ticket : la confirmation d'envoi du formulaire */
 .confirmation-ticket {
@@ -752,6 +778,7 @@ p {
 
 .ticket-fermer {
     position: absolute;
+    z-index: 2;
     top: 0.6rem;
     right: 0.9rem;
     background: none;
@@ -829,16 +856,29 @@ p {
     margin-top: 0.2rem;
 }
 
-/* Faux code-barres decoratif */
+/* Le code-barres du ticket : decoratif, mais cliquable. Il renvoie au
+   profil LinkedIn, avec sa legende juste en dessous pour que le lien se
+   devine sans avoir a survoler. */
+.ticket-linkedin {
+    display: block;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+.ticket-linkedin:hover,
+.ticket-linkedin:focus-visible { opacity: 0.6; }
+
 .ticket-codebarre {
+    display: block;
     height: 42px;
     width: 70%;
     margin: 1.4rem auto 0.4rem;
     background-image: repeating-linear-gradient(90deg, var(--noir) 0, var(--noir) 2px, transparent 2px, transparent 5px);
 }
 .ticket-code {
+    display: block;
     font-size: 0.7rem;
     letter-spacing: 0.3em;
+    text-transform: uppercase;
     color: rgba(42, 24, 16, 0.6);
 }
 
@@ -847,6 +887,47 @@ p {
     flex-direction: column;
     gap: 0.8rem;
     margin-top: 1.6rem;
+}
+
+/* Sur petit ecran le ticket se resserre : un vrai ticket de caisse est
+   etroit, il ne doit pas remplir l'ecran. Tout est mis a l'echelle, et
+   le total passe sur deux lignes centrees (sa valeur, trop longue,
+   debordait du cadre). Les autres valeurs peuvent revenir a la ligne. */
+@media (max-width: 600px) {
+    .addition-overlay { padding: 1.5rem; }
+    .ticket {
+        max-width: 320px;
+        padding: 2rem 1.2rem 1.5rem;
+    }
+
+    .ticket-fermer { font-size: 1.4rem; top: 0.4rem; right: 0.7rem; }
+    .ticket-titre { font-size: 1.6rem; }
+    .ticket-soustitre { font-size: 0.85rem; margin-bottom: 1.1rem; }
+    .ticket-separateur { margin: 1rem 0; }
+
+    .ticket-lignes { gap: 0.55rem; }
+    .ticket-ligne { font-size: 0.78rem; }
+    .ticket-ligne .val { white-space: normal; text-align: right; }
+    .ticket-total {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.3rem;
+        font-size: 0.85rem;
+    }
+    .ticket-total .pts { display: none; }
+    .ticket-total .val { text-align: center; }
+
+    .ticket-servie { font-size: 0.68rem; }
+    .ticket-nom { font-size: 1.2rem; }
+    .ticket-contact { font-size: 0.72rem; }
+    .ticket-codebarre { height: 32px; margin: 1.1rem auto 0.3rem; }
+    .ticket-boutons { gap: 0.6rem; margin-top: 1.2rem; }
+
+    /* La confirmation d'envoi du formulaire suit le meme gabarit */
+    .confirmation-ticket { max-width: 320px; padding: 2.2rem 1.2rem 1.8rem; }
+    .confirmation-picto { width: 46px; height: 46px; line-height: 44px; font-size: 1.3rem; }
+    .confirmation-texte { font-size: 0.84rem; margin: 0.9rem 0 1.5rem; }
 }
 
 
@@ -2300,6 +2381,15 @@ main > .etude-section:last-child { padding-bottom: 7rem; }
     transition: background-color 0.2s ease;
 }
 .avatar-hasard:hover { background-color: #EDE7DA; }
+
+/* Le telechargement du chat en PNG : meme forme que "Au hasard", mais
+   plein, parce que c'est l'action qui conclut la personnalisation */
+.avatar-telecharger {
+    background-color: var(--labo-encre);
+    color: var(--labo-creme);
+}
+.avatar-telecharger:hover { background-color: #4A4A4A; }
+.avatar-telecharger[disabled] { opacity: 0.6; cursor: default; }
 
 /* --- Colonne de droite : onglets et options --- */
 .avatar-panneaux {
@@ -4357,15 +4447,19 @@ main > .etude-section:last-child { padding-bottom: 7rem; }
     /* Le visuel passe sous le texte */
     .etude-hero-grille { flex-direction: column; align-items: stretch; gap: 2rem; }
 
-    /* La DA s'empile, l'editeur d'avatar passe en colonne */
+    /* La DA s'empile. L'editeur d'avatar, lui, garde ses deux colonnes :
+       l'apercu du chat a gauche, sa personnalisation a droite, sur le
+       meme niveau de page. Seules les proportions se resserrent. */
     .etude-da { grid-template-columns: 1fr; }
-    .avatar-editeur { flex-direction: column; align-items: center; }
+    .avatar-editeur { gap: 1rem; padding: 1rem; }
     /* Pas d'align-items ici : il empecherait la scene de prendre la largeur
        de la colonne, et l'apercu du chat se reduirait a rien */
-    .avatar-scene-colonne { width: 100%; max-width: 220px; }
+    .avatar-scene-colonne { width: 40%; max-width: 200px; gap: 0.6rem; }
     .avatar-themes { justify-content: center; }
-    .avatar-panneaux { width: 100%; }
+    .avatar-hasard { font-size: 0.72rem; padding: 0.5em 0.7em; }
+    .avatar-panneaux { gap: 0.85rem; }
     .avatar-onglets { justify-content: center; }
+    .avatar-onglet { font-size: 0.72rem; padding: 0.45em 0.8em; }
 
     /* Publications : chaque carrousel reprend toute la largeur, le reel
        et les stories passent a deux par ligne */
@@ -4394,7 +4488,14 @@ main > .etude-section:last-child { padding-bottom: 7rem; }
         margin-bottom: 2rem;
     }
     .labo-avatars-grille { flex-direction: column; gap: 2rem; }
-    .labo-avatars-vitrine { width: 100%; max-width: 300px; }
+    /* Les quatre chats passent sur une seule ligne : ils forment une
+       frise au-dessus de l'editeur plutot qu'un bloc carre */
+    .labo-avatars-vitrine {
+        width: 100%;
+        max-width: none;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.8rem;
+    }
     .labo-planche { flex-direction: column; gap: 1.5rem; padding: 1.5rem; }
     .labo-planche-visuel img { height: auto; }
     .labo-cartes { grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
@@ -4409,8 +4510,20 @@ main > .etude-section:last-child { padding-bottom: 7rem; }
     .etude-mascottes { grid-template-columns: 1fr; }
     .etude-boutons .btn { width: 100%; text-align: center; }
 
-    /* Deux tuiles par ligne : elles restent lisibles sur petit ecran */
-    .avatar-tuiles { grid-template-columns: repeat(2, 1fr); }
+    /* L'editeur reste sur une seule ligne, en version compacte :
+       apercu a gauche, reglages a droite, deux tuiles par ligne */
+    .avatar-editeur { gap: 0.7rem; padding: 0.8rem; border-radius: 14px; }
+    .avatar-scene-colonne { width: 38%; gap: 0.5rem; }
+    .avatar-scene { padding: 8%; border-radius: 10px; }
+    .avatar-themes { gap: 0.35rem; }
+    .avatar-theme { width: 22px; height: 22px; }
+    .avatar-hasard { font-size: 0.68rem; padding: 0.5em 0.4em; }
+    .avatar-onglets { gap: 0.3rem; }
+    .avatar-onglet { font-size: 0.66rem; padding: 0.4em 0.65em; }
+    .avatar-pastilles { gap: 0.35rem; }
+    .avatar-pastille { width: 26px; height: 26px; }
+    .avatar-tuiles { grid-template-columns: repeat(2, 1fr); gap: 0.4rem; }
+    .avatar-palette-titre { font-size: 0.62rem; margin: 0.7rem 0 0.4rem; }
 
     /* Une video de tuto par ligne */
     .labo-videos { grid-template-columns: 1fr; }
@@ -4437,5 +4550,5 @@ main > .etude-section:last-child { padding-bottom: 7rem; }
     .labo-carte-fratrie { font-size: 0.68rem; }
     .labo-carte-soustitre { font-size: 0.9rem; }
     .labo-carte-texte { font-size: 0.78rem; }
-    .labo-avatars-vitrine { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .labo-avatars-vitrine { grid-template-columns: repeat(4, 1fr); gap: 0.5rem; }
 }
