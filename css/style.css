@@ -1048,6 +1048,9 @@ p {
     margin: 0.6rem 0;
     max-width: 78%;
 }
+/* Carte Human to Computer : sous-titre et missions sous le lieu */
+.highlight-card .parcours-soustitre { margin-top: 1.2rem; }
+.highlight-card .parcours-liste { margin-bottom: 0; }
 .highlight-card .btn,
 .highlight-card .tag {
     margin-top: 1.3rem;
